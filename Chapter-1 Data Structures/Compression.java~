@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Compression
+{
+	public void Compression(String str)
+	{
+		StringBuffer mystr = new StringBuffer();
+		char last = str.charAt(0);
+		int count = 1;
+		for(int i = 1;i< str.length();i++)
+		{
+			if(str.charAt(i)== last)
+				count++;
+			else
+			{
+				mystr.append(last);
+				mystr.append(count);
+				last = str.charAt(i);
+				count = 1;
+			}
+		}
+		System.out.println(mystr);
+	}
+	public static void main(String[] args)
+	{
+		Scanner sc= new Scanner(System.in);
+		String S= sc.nextLine();
+		//System.out.println(S);
+		Compression c= new Compression();
+		c.Compression(S);
+	}
+}

@@ -1,0 +1,25 @@
+public class UniqueCharacters
+{
+	public void Unique(String S)
+	{
+		char[] char1= S.toCharArray();
+		for( int j =0;i< char1.length;j++)
+		{
+			System.out.println(char1[j]);
+			for(int i =j+1;i< char1.length;i++)
+			{
+				if(char1[j]==char1[i])
+				{
+					System.out.println("Duplicate Characters found.");
+					System.out.println(char1[i]);
+				}
+			}
+			
+		}
+	}	
+	public static void main(String[] args)
+	{
+		UniqueCharacters U = new UniqueCharacters();
+		U.Unique(args[0]);
+	}
+}
